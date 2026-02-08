@@ -1,0 +1,7 @@
+{
+  "network": "mainnet",
+  "contracts": [
+    {"address": "0x1111111111111111111111111111111111111111", "protocol": "aave_v3", "abi": []},
+    {"address": "0x2222222222222222222222222222222222222222", "protocol": "uniswap_v4", "abi": []}
+  ]
+}

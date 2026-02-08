@@ -1,0 +1,78 @@
+{
+  "cycle_id": "cycle-001",
+  "version": "1.0.0",
+  "network": "mainnet",
+  "steps": [
+    {
+      "id": "aave-flash",
+      "index": 0,
+      "protocol": "aave_v3",
+      "type": "flash_loan",
+      "target": "0x1111111111111111111111111111111111111111",
+      "func": "flashLoanSimple",
+      "calldata": "0x1234",
+      "value": "0"
+    },
+    {
+      "id": "aave-repay",
+      "index": 1,
+      "protocol": "aave_v3",
+      "type": "repay",
+      "target": "0x1111111111111111111111111111111111111111",
+      "func": "repay",
+      "calldata": "0xabcd",
+      "value": "0"
+    },
+    {
+      "id": "aave-callback",
+      "index": 2,
+      "protocol": "aave_v3",
+      "type": "callback",
+      "target": "0x1111111111111111111111111111111111111111",
+      "func": "executeOperation",
+      "calldata": "0xbeef",
+      "value": "0",
+      "dependencies": ["aave-flash"]
+    },
+    {
+      "id": "uni-unlock",
+      "index": 3,
+      "protocol": "uniswap_v4",
+      "type": "unlock",
+      "target": "0x2222222222222222222222222222222222222222",
+      "func": "unlock",
+      "calldata": "0x01",
+      "value": "0"
+    },
+    {
+      "id": "uni-swap",
+      "index": 4,
+      "protocol": "uniswap_v4",
+      "type": "swap",
+      "target": "0x2222222222222222222222222222222222222222",
+      "func": "swap",
+      "calldata": "0x02",
+      "value": "0"
+    },
+    {
+      "id": "uni-settle",
+      "index": 5,
+      "protocol": "uniswap_v4",
+      "type": "settle",
+      "target": "0x2222222222222222222222222222222222222222",
+      "func": "settle",
+      "calldata": "0x03",
+      "value": "0"
+    },
+    {
+      "id": "uni-lock",
+      "index": 6,
+      "protocol": "uniswap_v4",
+      "type": "lock",
+      "target": "0x2222222222222222222222222222222222222222",
+      "func": "lock",
+      "calldata": "0x04",
+      "value": "0"
+    }
+  ]
+}

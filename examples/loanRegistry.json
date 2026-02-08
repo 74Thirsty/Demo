@@ -1,0 +1,12 @@
+{
+  "network": "mainnet",
+  "loans": [
+    {
+      "loan_id": "loan-001",
+      "protocol": "aave_v3",
+      "asset": "WETH",
+      "amount": "1000000000000000000",
+      "borrower": "0x3333333333333333333333333333333333333333"
+    }
+  ]
+}
